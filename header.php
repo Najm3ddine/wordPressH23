@@ -7,16 +7,28 @@
     <title>Document</title>
     <?php wp_head(); ?>
 </head>
-<body>
-    <header class="site__entete">  
+<body class="site">
+    <header class="site__entete"> 
         <section class="logomenu">
             <?php the_custom_logo(); ?> 
-            <?php wp_nav_menu(array(
-                'menu' => 'entete',
-                'container' => 'nav'
-            )); ?>     
+            <div class="menusearch">
+                <?php wp_nav_menu(array(
+                    'menu' => 'entete',
+                    'container' => 'nav'
+                )); ?> 
+                <?= get_search_form(); ?>   
+            </div> 
         </section>
         <h1><a href="<?php  bloginfo('url'); ?>"><?php  bloginfo('name'); ?></a></h1> 
         <h2><?php  bloginfo('description'); ?></h2>
     </header>
-    
+    <aside class="site__aside">
+        <h3>Menu secondaire</h3>
+
+        $category = get_queried_object();
+
+        <?php wp_nav_menu(array(
+            "menu" => "cours",
+            "container" => "nav"
+        )); ?>
+    </aside>
