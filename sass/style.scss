@@ -1,8 +1,8 @@
 /*
-Theme Name: 31w Eddy Martin
-Theme URI: https://github.com/eddytuto
-Author: Eddy Martin
-Author URI: https://eddytuto.ca
+Theme Name: 31w Theme
+Theme URI: https://github.com/Najm3ddine/2023-31w/tree/exer2
+Author: Najmeddine Rafqi
+Author URI: Najmeddine Rafqi
 Description: Introductin à la création d'un thème Wordpress
 Version: 1.0
 Requires at least: 6.1.1
@@ -19,7 +19,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "normalize/normalize";
 @import "normalize/boxsizing";
 
-
 /* -------------------------- BASE */
 @import "base/heading";
 @import "base/markdown";
@@ -27,5 +26,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* -------------------------- COMPOSANT */
 @import "composant/entete";
 @import "composant/blocflex";
+@import "composant/recherche";
 
-
+/* -------------------------- LAYOUT */
+@import "layout/aside-contenu";
