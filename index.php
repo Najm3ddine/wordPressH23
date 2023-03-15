@@ -2,7 +2,6 @@
 /**
     Modèle index.php représente le modèle par défaut du thème
 */
-
 get_header() ?>
 <main class="site__main">
     <h3>index.php</h3>
@@ -22,4 +21,5 @@ endif;
 ?>   
 </main> 
 <?php get_footer(); ?>
+
 
