@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /*
-Theme Name: 31w Theme
-Theme URI: https://github.com/Najm3ddine/2023-31w/tree/exer2
-Author: Najmeddine Rafqi
-Author URI: Najmeddine Rafqi
+Theme Name: 31w Eddy Martin
+Theme URI: https://github.com/eddytuto
+Author: Eddy Martin
+Author URI: https://eddytuto.ca
 Description: Introductin à la création d'un thème Wordpress
 Version: 1.0
 Requires at least: 6.1.1
@@ -396,30 +396,77 @@ p {
 
 .menusearch {
 	display: flex;
+	flex-direction: column-reverse;
 	justify-content: flex-start;
-	align-items: center;
-	flex-wrap: wrap;
+	align-items: flex-end;
+}
+@media screen and (min-width: 1000px) {
+	.menusearch {
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-end;
+		flex: 1;
+	}
 }
 
+#chkBurger {
+	display: none;
+}
+
+#chkBurger:checked ~ .menu-entete-container {
+	transform: translateX(0);
+}
+
+.burger {
+	display: block;
+}
+@media screen and (min-width: 500px) {
+	.burger {
+		display: none;
+	}
+}
+
+.menu-entete-container {
+	transform: translateX(300px);
+	transition: transform 0.25s;
+}
+@media screen and (min-width: 500px) {
+	.menu-entete-container {
+		transform: translateX(0);
+	}
+}
 .menu-entete-container .menu {
 	display: flex;
-	justify-content: flex-end;
-	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: flex-start;
 	list-style-type: none;
+}
+@media screen and (min-width: 500px) {
+	.menu-entete-container .menu {
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+	}
 }
 .menu-entete-container .menu .menu-item {
 	flex: 1 0 50px;
 }
 .menu-entete-container .menu .menu-item a {
-	font-size: 15px;
-	font-weight: 600;
-	padding: 20px;
-	color: #555;
-	text-decoration: none;
 	white-space: nowrap;
+	text-decoration: none;
+	padding: 20px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #555;
 }
 .menu-entete-container .menu .menu-item a:hover {
 	color: black;
+}
+
+.recherche {
+	display: flex;
+	flex-wrap: nowrap;
 }
 
 .blocflex {
@@ -439,21 +486,31 @@ p {
 	flex: 1 0 100%;
 }
 
-.recherche article {
+.main__recherche article {
 	background-color: white;
 	margin: 10px;
 }
 
 .menu-cours-container .menu {
 	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+@media screen and (min-width: 1000px) {
+	.menu-cours-container .menu {
+		flex-direction: column;
+	}
 }
 .menu-cours-container .menu .menu-item {
 	list-style-type: none;
 }
+.menu-cours-container .menu .menu-item a .cours__sigle {
+	padding: 3px;
+}
 .menu-cours-container .menu .menu-item a .cours__titre {
 	display: none;
 }
-@media dcreen and (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
 	.menu-cours-container .menu .menu-item a .cours__titre {
 		display: block;
 	}
@@ -486,6 +543,8 @@ Mise en page avec display: grid
 
 /* body ou un conteneur globale */
 .site {
+	width: 100vw;
+	overflow-x: hidden;
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-areas: "header" "aside" "main" "footer";
@@ -496,4 +555,15 @@ Mise en page avec display: grid
 		grid-template-columns: 30% auto;
 		grid-template-areas: "header header" "aside main" "footer footer";
 	}
-} /*# sourceMappingURL=style.css.map */
+}
+
+.no-aside {
+	grid-template-areas: "header" "main" "footer";
+	row-gap: 50px;
+}
+@media screen and (min-width: 1000px) {
+	.no-aside {
+		grid-template-columns: auto;
+		grid-template-areas: "header" "main" "footer";
+	}
+}
