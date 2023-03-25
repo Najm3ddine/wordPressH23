@@ -384,6 +384,18 @@ p {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
+.invisible {
+  display: none;
+}
+
+.site__main {
+  grid-area: main;
+  overflow: hidden;
+  background-color: transparent;
+  margin-right: 25px;
+  margin-left: 8px;
+}
+
 /* -------------------------- COMPOSANT */
 .logomenu {
   display: flex;
@@ -476,11 +488,23 @@ p {
   margin: 10px;
   padding: 5px;
   border: 1px solid #aaa;
-  flex: 1 0 300px;
+  flex: 1 0 250px;
+  justify-content: center;
 }
 
 .blocflex__galerie {
   flex: 1 0 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+.galerie {
+  background-color: transparent;
+}
+
+.bouton__ouvrir {
+  padding: 15px 15px;
 }
 
 .main__recherche article {
@@ -488,27 +512,38 @@ p {
   margin: 10px;
 }
 
-.menu-cours-container .menu {
+.menu-cours-container .menu,
+.menu-note-wp-container .menu {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 1000px) {
-  .menu-cours-container .menu {
+  .menu-cours-container .menu,
+  .menu-note-wp-container .menu {
     flex-direction: column;
   }
 }
-.menu-cours-container .menu .menu-item {
+.menu-cours-container .menu .menu-item,
+.menu-note-wp-container .menu .menu-item {
   list-style-type: none;
 }
-.menu-cours-container .menu .menu-item a .cours__sigle {
+.menu-cours-container .menu .menu-item a,
+.menu-note-wp-container .menu .menu-item a {
+  display: flex;
+  align-items: center;
+}
+.menu-cours-container .menu .menu-item a .cours__sigle,
+.menu-note-wp-container .menu .menu-item a .cours__sigle {
   padding: 3px;
 }
-.menu-cours-container .menu .menu-item a .cours__titre {
+.menu-cours-container .menu .menu-item a .cours__titre,
+.menu-note-wp-container .menu .menu-item a .cours__titre {
   display: none;
 }
 @media screen and (min-width: 1000px) {
-  .menu-cours-container .menu .menu-item a .cours__titre {
+  .menu-cours-container .menu .menu-item a .cours__titre,
+  .menu-note-wp-container .menu .menu-item a .cours__titre {
     display: block;
   }
 }

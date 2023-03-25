@@ -8,8 +8,19 @@
 	margin: 10px;
 	padding: 5px;
 	border: 1px solid #aaa;
-	flex: 1 0 300px;
+	flex: 1 0 250px;
+	justify-content: center;
 }
 .blocflex__galerie {
 	flex: 1 0 100%;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+}
+.galerie {
+	background-color: transparent;
+}
+
+.bouton__ouvrir {
+	padding: 15px 15px;
 }
