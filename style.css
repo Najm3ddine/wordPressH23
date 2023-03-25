@@ -531,7 +531,15 @@ p {
 .menu-cours-container .menu .menu-item a,
 .menu-note-wp-container .menu .menu-item a {
   display: flex;
+  flex: 1;
   align-items: center;
+  text-decoration: none;
+  font-variant: small-caps;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #000;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 3px 5px;
 }
 .menu-cours-container .menu .menu-item a .cours__sigle,
 .menu-note-wp-container .menu .menu-item a .cours__sigle {
