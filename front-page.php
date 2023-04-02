@@ -4,6 +4,15 @@
 */
 get_header() ?>
 <main class="site__main">
+    <section class="viewport">
+        <h1>Tp2</h1>
+        <h4>Auteur: Najmeddine Rafqi</h4>
+        <?php wp_nav_menu(array(
+            "menu" => "evenement",
+            "container" => "nav",
+            "container_class" => "menu__bloc"
+        )); ?>
+    </section>
     <section class="blocflex">            
         <?php 
         if (have_posts()):
@@ -14,6 +23,5 @@ get_header() ?>
             endwhile;
         endif; ?> 
     </section>
-  
 </main> 
 <?php get_footer(); ?>

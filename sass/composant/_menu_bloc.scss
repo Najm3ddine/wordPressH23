@@ -1,0 +1,19 @@
+.menu__bloc {
+	//nav
+	.menu {
+		//ul
+		display: flex;
+		flex-wrap: wrap;
+		list-style-type: none;
+		.menu-item {
+			//li
+			flex: 1 0 30%;
+
+			a {
+				font-size: 2rem;
+				text-decoration: none;
+				color: black;
+			}
+		}
+	}
+}

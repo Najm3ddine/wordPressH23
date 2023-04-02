@@ -337,7 +337,7 @@ html {
 
 /* -------------------------- BASE */
 h1 {
-  font-size: clamp(0.75rem, -0.75rem + 4.8vw, 3.75rem);
+  font-size: clamp(1rem, -0.75rem + 4.8vw, 3.75rem);
 }
 
 h2 {
@@ -349,11 +349,11 @@ h3 {
 }
 
 h4 {
-  font-size: clamp(0.5rem, -0.1875rem + 2.2vw, 1.875rem);
+  font-size: clamp(1rem, -0.1875rem + 2.2vw, 1.875rem);
 }
 
 h5 {
-  font-size: clamp(0.5rem, -0.0313rem + 1.7vw, 1.5625rem);
+  font-size: clamp(1rem, -0.0313rem + 1.7vw, 1.5625rem);
 }
 
 h6 {
@@ -361,7 +361,7 @@ h6 {
 }
 
 P {
-  font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.1rem);
+  font-size: clamp(1rem, 0.125rem + 1.2vw, 1.1rem);
 }
 
 h1 {
@@ -391,12 +391,41 @@ p {
 .site__main {
   grid-area: main;
   overflow: hidden;
-  background-color: transparent;
   margin-right: 25px;
   margin-left: 8px;
 }
 
 /* -------------------------- COMPOSANT */
+.blocflex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.blocflex__article {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+}
+.blocflex__article a {
+  color: black;
+}
+@media screen and (min-width: 300px) {
+  .blocflex__article {
+    flex: 1 0 250px;
+    padding: 20px;
+    margin: 10px;
+  }
+}
+
+.blocflex__galerie {
+  flex: 1 0 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .logomenu {
   display: flex;
   justify-content: space-between;
@@ -478,38 +507,30 @@ p {
   flex-wrap: nowrap;
 }
 
-.blocflex {
+.site__footer h5 {
+  text-align: center;
+  background-color: lightgray;
+  padding: 15px;
+  margin-right: 25px;
+  margin-left: 8px;
+}
+
+.site__footer {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 30px 30px 10px 30px;
 }
 
-.blocflex__article {
-  margin: 10px;
-  padding: 5px;
-  border: 1px solid #aaa;
-  flex: 1 0 250px;
-  justify-content: center;
-}
-
-.blocflex__galerie {
-  flex: 1 0 100%;
-  background-color: transparent;
+.footer__widget {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  margin-right: 25px;
+  margin-left: 8px;
+  gap: 5px;
 }
 
-.galerie {
-  background-color: transparent;
-}
-
-.bouton__ouvrir {
-  padding: 15px 15px;
-}
-
-.main__recherche article {
-  background-color: transparent;
-  margin: 10px;
+.footer__lien {
+  margin-left: 0px;
 }
 
 .menu-cours-container .menu,
@@ -539,6 +560,8 @@ p {
   color: #000;
   border-radius: 5px;
   margin: 5px 0;
+  margin-right: 25px;
+  margin-left: 8px;
   padding: 3px 5px;
 }
 .menu-cours-container .menu .menu-item a .cours__sigle,
@@ -554,6 +577,61 @@ p {
   .menu-note-wp-container .menu .menu-item a .cours__titre {
     display: block;
   }
+}
+
+.menu-note-wp-container .menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1000px) {
+  .menu-note-wp-container .menu {
+    flex-direction: column;
+  }
+}
+.menu-note-wp-container .menu .menu-item {
+  list-style-type: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+.menu-note-wp-container .menu .menu-item a {
+  font-weight: 600;
+  text-decoration: none;
+}
+.menu-note-wp-container .menu .menu-item a .note__numero {
+  padding: 3px;
+}
+.menu-note-wp-container .menu .menu-item a .note__titre {
+  display: none;
+}
+@media screen and (min-width: 1000px) {
+  .menu-note-wp-container .menu .menu-item a .note__titre {
+    display: inline;
+  }
+}
+
+.main__recherche article {
+  background-color: transparent;
+  margin: 10px;
+}
+
+.menu__bloc .menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.menu__bloc .menu .menu-item {
+  flex: 1 0 30%;
+}
+.menu__bloc .menu .menu-item a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+}
+
+.viewport {
+  min-height: 100vh;
+  padding: 0 3rem;
 }
 
 /* -------------------------- LAYOUT */
@@ -586,18 +664,16 @@ p {
   display: grid;
   grid-template-columns: auto;
   grid-template-areas: "header" "aside" "main" "footer";
-  row-gap: 50px;
 }
 @media screen and (min-width: 1000px) {
   .site {
-    grid-template-columns: 30% auto;
+    grid-template-columns: 25% auto;
     grid-template-areas: "header header" "aside main" "footer footer";
   }
 }
 
 .no-aside {
   grid-template-areas: "header" "main" "footer";
-  row-gap: 50px;
 }
 @media screen and (min-width: 1000px) {
   .no-aside {
