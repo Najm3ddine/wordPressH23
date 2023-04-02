@@ -530,7 +530,13 @@ p {
 }
 
 .footer__lien {
+  display: flex;
   margin-left: 0px;
+}
+
+.footer__lien a {
+  list-style: none;
+  text-decoration: none;
 }
 
 .menu-cours-container .menu,

@@ -25,7 +25,6 @@
             <?php wp_nav_menu(array('menu' => 'lien-externe-2')); ?>
         </div>
         <div>
-            
         </div>
     </section>
 <h5>Tous droits réservés 2023 © Introduction a un gestionnaire de contenu</h5>
