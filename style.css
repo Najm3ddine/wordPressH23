@@ -337,7 +337,7 @@ html {
 
 /* -------------------------- BASE */
 h1 {
-  font-size: clamp(1rem, -0.75rem + 4.8vw, 3.75rem);
+  font-size: clamp(2rem, 4.8vw, 3.75rem);
 }
 
 h2 {
@@ -349,7 +349,7 @@ h3 {
 }
 
 h4 {
-  font-size: clamp(1rem, -0.1875rem + 2.2vw, 1.875rem);
+  font-size: clamp(1.5rem, -0.1875rem + 2.2vw, 1.875rem);
 }
 
 h5 {
@@ -357,7 +357,7 @@ h5 {
 }
 
 h6 {
-  font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
+  font-size: clamp(1rem, 0.125rem + 1.2vw, 1.25rem);
 }
 
 P {
@@ -404,16 +404,19 @@ p {
 
 .blocflex__article {
   display: flex;
+  background-color: lightgray;
   flex-direction: column;
   padding: 5px;
   border: 2px solid lightgray;
   border-radius: 5px;
+  opacity: 0.8;
 }
 .blocflex__article a {
   color: black;
 }
 @media screen and (min-width: 300px) {
   .blocflex__article {
+    background-color: lightgray;
     flex: 1 0 250px;
     padding: 20px;
     margin: 10px;
@@ -522,11 +525,11 @@ p {
 }
 
 .footer__widget {
-  display: flex;
-  flex-direction: row;
-  margin-right: 25px;
-  margin-left: 8px;
-  gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+  padding: 20px;
+  margin: 10px;
 }
 
 .footer__lien {
@@ -633,6 +636,14 @@ p {
   font-size: 2rem;
   text-decoration: none;
   color: black;
+  margin-left: 50px;
+}
+
+.evenement__porte {
+  background-image: url("https://s2.svgbox.net/hero-outline.svg?ic=newspaper");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 35px 35px;
 }
 
 .viewport {

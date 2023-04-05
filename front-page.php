@@ -5,13 +5,13 @@
 get_header() ?>
 <main class="site__main">
     <section class="viewport">
-        <h1>Tp2</h1>
-        <h4>Auteur: Najmeddine Rafqi</h4>
         <?php wp_nav_menu(array(
             "menu" => "evenement",
             "container" => "nav",
             "container_class" => "menu__bloc"
         )); ?>
+        <h1>Tp2</h1>
+        <h4>Auteur: Najmeddine Rafqi</h4>
     </section>
     <section class="blocflex">            
         <?php 

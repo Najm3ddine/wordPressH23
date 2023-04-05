@@ -4,7 +4,6 @@
 */
 get_header() ?>
 <main class="site__main">
-    <code>search.php</code>
     <section class="main__recherche">
 <?php 
 if (have_posts()):

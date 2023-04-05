@@ -6,14 +6,18 @@
 
 .blocflex__article {
 	display: flex;
+	background-color: lightgray;
 	flex-direction: column;
 	padding: 5px;
 	border: 2px solid lightgray;
 	border-radius: 5px;
+	opacity: 0.8;
 	a {
 		color: black;
 	}
 	@media screen and (min-width: 300px) {
+		background-color: lightgray;
+
 		flex: 1 0 250px;
 		padding: 20px;
 		margin: 10px;
