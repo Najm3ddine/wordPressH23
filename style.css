@@ -395,25 +395,6 @@ p {
   margin-left: 8px;
 }
 
-.page__introuvable h1 {
-  text-align: center;
-  color: red;
-}
-
-.page__introuvable .rechercher {
-  text-align: center;
-  color: red;
-  font-weight: 600;
-}
-
-.search_form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
 /* -------------------------- COMPOSANT */
 .blocflex {
   display: flex;
@@ -668,6 +649,39 @@ p {
 .viewport {
   min-height: 100vh;
   padding: 0 3rem;
+}
+
+.page__introuvable h1 {
+  text-align: center;
+  color: red;
+}
+
+.page__introuvable .rechercher {
+  text-align: center;
+  color: red;
+  font-weight: 600;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #ddd;
+}
+
+button[type=submit] {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 /* -------------------------- LAYOUT */
