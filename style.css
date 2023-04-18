@@ -684,6 +684,11 @@ button[type=submit] {
   cursor: pointer;
 }
 
+.page__introuvable h6 {
+  text-align: center;
+  color: red;
+}
+
 /* -------------------------- LAYOUT */
 .site__entete {
   grid-area: header;

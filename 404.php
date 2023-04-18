@@ -9,11 +9,14 @@ get_header() ?>
     <h1>Erreur 404</h1>
     <p class="rechercher">Page introuvable, vous pouvez tenter une recherche</p>
     <div class="search-container">
-        <form action="/search">
+        <form action="search">
             <input type="text" placeholder="Recherche..." name="search">
             <button type="submit"></button>
         </form>
     </div>
+    <h6>Nos choix de cours</h6>
+    
+    <h6>Les notes de cours</h6>
 </div>
 </main> 
 
